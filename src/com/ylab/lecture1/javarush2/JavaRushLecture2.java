@@ -1,5 +1,7 @@
 package com.ylab.lecture1.javarush2;
 
+import com.ylab.lecture1.javarush2.pet.*;
+
 public class JavaRushLecture2 {
 
     public static void main(String[] args) {

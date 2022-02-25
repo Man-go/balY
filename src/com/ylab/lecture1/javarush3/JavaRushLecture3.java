@@ -1,5 +1,7 @@
 package com.ylab.lecture1.javarush3;
 
+import com.ylab.lecture1.javarush3.colors.*;
+
 import java.util.Scanner;
 
 public class JavaRushLecture3 {

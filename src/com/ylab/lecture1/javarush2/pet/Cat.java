@@ -1,6 +1,6 @@
-package com.ylab.lecture1.javarush2;
+package com.ylab.lecture1.javarush2.pet;
 
-public class Dog {
+public class Cat {
 
     Person owner;
     Rectangle territory;
@@ -11,3 +11,4 @@ public class Dog {
         this.owner = owner;
     }
 }
+
