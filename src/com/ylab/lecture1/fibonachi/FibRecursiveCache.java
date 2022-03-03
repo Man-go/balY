@@ -5,7 +5,7 @@ package com.ylab.lecture1.fibonachi;
  * вычисленных элементов.
  */
 public class FibRecursiveCache {
-    static long[] cache = new long[100];
+    static long[] cache = new long[92];
 
     public static long fib(int n) {
         if (n < 0 || n > 92) {
