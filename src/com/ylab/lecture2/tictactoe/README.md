@@ -23,9 +23,11 @@
 5. вводятся координаты от нуля до n-1 (т.е. для размера поля 3x3 это от 0 до 2)
 
 ![game step](resources/Screenshot_2.jpg)
+
 6. игра идет по очереди.
 
 ![game step](resources/Screenshot_3.jpg)
+
 7. Невозможно ввести координату занятого поля
 
 ![game step](resources/Screenshot_4.jpg)
