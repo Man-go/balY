@@ -32,8 +32,8 @@ public class TicTacToe {
 
             String x;
             String y;
-            IOhelper.playTicTacToe(player1, player2, model, board, totalGames);
             totalGames++;
+            IOhelper.playTicTacToe(player1, player2, model, board, totalGames);
         }
     }
 }
