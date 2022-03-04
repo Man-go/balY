@@ -31,34 +31,34 @@
 ![game step](resources/Screenshot_4.jpg)  
 8. Невозможно ввести координаты не существующего поля
 
-![game step](resources/Screenshot_5.jpg)
+![game step](resources/Screenshot_5.jpg)  
 9. Невозможно ввести не цифру
 
-![game step](resources/Screenshot_6.jpg)
+![game step](resources/Screenshot_6.jpg)  
 10. Все верно, ход переходит к следующему игроку
 
-![game step](resources/Screenshot_7.jpg)
+![game step](resources/Screenshot_7.jpg)  
 11. Игра окончена, выиграл Крестик. Общее число побед первого игрока (Kate) увеличено на один.
 
-![game step](resources/Screenshot_8.jpg)
+![game step](resources/Screenshot_8.jpg)  
 12. Игроки продолжили игру. Имена у игроков не спрашиваются повторно.
 
-![game step](resources/Screenshot_9.jpg)
+![game step](resources/Screenshot_9.jpg)  
 13. На этот раз победу одержала Helga, и ее количество побед увеличено на 1
 
-![game step](resources/Screenshot_10.jpg)
+![game step](resources/Screenshot_10.jpg)  
 14. Игроки сыграли в ничью. Общее соотношение побед не изменилось.
 
-![game step](resources/Screenshot_11.jpg)
+![game step](resources/Screenshot_11.jpg)  
 15. Игроки закончили игру, их результаты записаны в файл
 
-![game step](resources/Screenshot_12.jpg)
+![game step](resources/Screenshot_12.jpg)  
 16. В файле появился результат текущей игровой сессии
 
-![game step](resources/Screenshot_13.jpg)
+![game step](resources/Screenshot_13.jpg)  
 17. Можно играть на поле 4x4. Правила остались те же самые
 
-![game step](resources/Screenshot_14.jpg)
+![game step](resources/Screenshot_14.jpg)  
 18. Игра на поле 4x4 окончена.
 
 ## Приятной игры!
