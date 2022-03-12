@@ -42,14 +42,17 @@ public class IOhelper {
             String string = counter % 2 == 0 ? ("Нолик - " + player2.getName()) : ("Крестик - " + player1.getName());
             if (counter % 2 == 0) {
                 player2.setWin();
+                model.setWinner(player2.getName());
             } else {
                 player1.setWin();
+                model.setWinner(player1.getName());
             }
             System.out.println(board.printBoard(model.getMoves()));
             System.out.println("Игра окончена, выйграл: " + string);
         } else {
             System.out.println(board.printBoard(model.getMoves()));
             System.out.println("Ничья");
+            model.setWinner("DRAW");
         }
         System.out.printf("Общий счет: %s - %d : %d - %s", player1.getName(), player1.getWin(), player2.getWin(), player2.getName());
         System.out.println("\n======================================\n");
@@ -92,5 +95,8 @@ public class IOhelper {
             counter++;
         }
         printResult(player1, player2, counter, model, board);
+
+        History history = new History();
+        history.createXML(player1, player2, model);
     }
 }

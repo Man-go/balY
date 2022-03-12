@@ -1,5 +1,8 @@
 package com.ylab.lecture2.tictactoe;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * класс описывающий общую модель игры.
  * Хранится ширина поля, ходы двух играков.
@@ -9,23 +12,40 @@ package com.ylab.lecture2.tictactoe;
 public class Model {
     private int n;
     private char[][] moves;
+    private List<int[]> coordinateMoves = new ArrayList<>();
+    private String winner;
+
+    public Model() {
+    }
 
     public Model(int n) {
         this.n = n;
-        this.moves = new char[n][n];
-        setEmptyMoves();
+        this.moves = setEmptyMoves(n);
+        //this.moves = new char[n][n];
+        //etEmptyMoves();
     }
 
-    public void setEmptyMoves() {
+//    public void setEmptyMoves() {
+//        for (int i = 0; i < n; i++) {
+//            for (int j = 0; j < n; j++) {
+//                this.moves[i][j] = ' ';
+//            }
+//        }
+//    }
+
+    public char[][] setEmptyMoves(int n) {
+        char[][] charsArray = new char[n][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                this.moves[i][j] = ' ';
+                charsArray[i][j] = ' ';
             }
         }
+        return charsArray;
     }
 
     public void setMove(int x, int y, char ch) {
         this.moves[x][y] = ch;
+        this.coordinateMoves.add(new int[]{x, y});
     }
 
     public boolean isValid(int x, int y) {
@@ -115,5 +135,21 @@ public class Model {
 
     public char[][] getMoves() {
         return moves;
+    }
+
+    public String getWinner() {
+        return winner;
+    }
+
+    public void setWinner(String winner) {
+        this.winner = winner;
+    }
+
+    public List<int[]> getCoordinateMoves() {
+        return coordinateMoves;
+    }
+
+    public void setN(int n) {
+        this.n = n;
     }
 }
