@@ -21,17 +21,7 @@ public class Model {
     public Model(int n) {
         this.n = n;
         this.moves = setEmptyMoves(n);
-        //this.moves = new char[n][n];
-        //etEmptyMoves();
     }
-
-//    public void setEmptyMoves() {
-//        for (int i = 0; i < n; i++) {
-//            for (int j = 0; j < n; j++) {
-//                this.moves[i][j] = ' ';
-//            }
-//        }
-//    }
 
     public char[][] setEmptyMoves(int n) {
         char[][] charsArray = new char[n][n];

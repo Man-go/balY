@@ -76,14 +76,10 @@ public class History {
                     winner.setAttribute("id", "1");
                     winner.setAttribute("name", name1);
                     winner.setAttribute("mark", "X");
-//                    Element winnerPlayer = getElementPlayer(document, name1, "1", "X");
-//                    winner.appendChild(winnerPlayer);
                 } else {
                     winner.setAttribute("id", "2");
                     winner.setAttribute("name", name2);
                     winner.setAttribute("mark", "0");
-//                    Element winnerPlayer = getElementPlayer(document, name2, "2", "0");
-//                    winner.appendChild(winnerPlayer);
                 }
             }
 
@@ -105,15 +101,6 @@ public class History {
         File[] files = file.listFiles();
         String str = String.valueOf(files.length);
         return str + "-game.xml";
-//        try {
-//            if (files == null) {
-//                throw new NullPointerException();
-//            } else {
-//                return files.length + "-game.xml";
-//            }
-//        } catch (NullPointerException e) {
-//            e.printStackTrace();
-//        }
     }
 
     public Element getElementPlayer(Document document, String name, String id, String mark) {
