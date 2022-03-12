@@ -61,7 +61,7 @@ public class History {
                 stepX.appendChild(text1);
 
                 playerStep.appendChild(stepY);
-                stepY.setAttribute("coordinate", "0");
+                stepY.setAttribute("coordinate", "Y");
                 Text text2 = document.createTextNode(String.valueOf(playersSteps.get(i)[1]));
                 stepY.appendChild(text2);
 
