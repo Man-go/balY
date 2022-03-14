@@ -52,7 +52,7 @@ public class IOhelper {
         } else {
             System.out.println(board.printBoard(model.getMoves()));
             System.out.println("Ничья");
-            model.setWinner("DRAW");
+            model.setWinner("DRAW!");
         }
         System.out.printf("Общий счет: %s - %d : %d - %s", player1.getName(), player1.getWin(), player2.getWin(), player2.getName());
         System.out.println("\n======================================\n");

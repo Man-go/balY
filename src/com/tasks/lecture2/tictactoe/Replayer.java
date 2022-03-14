@@ -14,7 +14,7 @@ public class Replayer {
         System.out.println("Повтор игры.");
         System.out.println(players[0] + " - Крестик, " + players[1] + " - Нолик");
         System.out.println();
-        if (model.getWinner().equals("DRAW")) {
+        if (model.getWinner().equals("DRAW!")) {
             System.out.println("Эта партия была сыграна в ничью.");
         } else {
             System.out.println("В этой партии выйграл(а) " + model.getWinner());

@@ -80,8 +80,8 @@ public class HistoryParser {
             Node item = nodeList.item(0).getChildNodes().item(1);
             model.setWinner(((Element) item).getAttribute("name"));
         } else {
-            model.setWinner("DRAW");
-            System.out.println("DRAW");
+            model.setWinner("DRAW!");
+            System.out.println("DRAW!");
         }
     }
 
