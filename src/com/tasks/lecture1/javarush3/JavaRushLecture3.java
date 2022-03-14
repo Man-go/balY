@@ -1,6 +1,6 @@
-package com.ylab.lecture1.javarush3;
+package com.tasks.lecture1.javarush3;
 
-import com.ylab.lecture1.javarush3.colors.*;
+import com.tasks.lecture1.javarush3.colors.*;
 
 import java.util.Scanner;
 

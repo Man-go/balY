@@ -1,4 +1,4 @@
-package com.ylab.lecture2.tictactoe;
+package com.tasks.lecture2.tictactoe;
 
 import java.io.BufferedWriter;
 import java.io.File;

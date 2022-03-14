@@ -1,4 +1,4 @@
-package com.ylab.lecture1.fibonachi;
+package com.tasks.lecture1.fibonachi;
 
 /**
  * Вычисление n-го числа фибоначи при помощи рекурсии.

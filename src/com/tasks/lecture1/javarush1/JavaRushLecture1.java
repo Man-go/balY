@@ -1,4 +1,4 @@
-package com.ylab.lecture1.javarush1;
+package com.tasks.lecture1.javarush1;
 
 public class JavaRushLecture1 {
 

@@ -1,6 +1,6 @@
-package com.ylab.lecture1.javarush2;
+package com.tasks.lecture1.javarush2;
 
-import com.ylab.lecture1.javarush2.pet.*;
+import com.tasks.lecture1.javarush2.pet.*;
 
 public class JavaRushLecture2 {
 
