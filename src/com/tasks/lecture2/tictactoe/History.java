@@ -18,7 +18,6 @@ import java.util.List;
 
 public class History {
 
-
     public void createXML(Player playerFirst, Player playerSecond, Model model) {
         try {
             String name1 = playerFirst.getName();
@@ -31,7 +30,8 @@ public class History {
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document document = builder.newDocument();
             Element root = document.createElement("GamePlay");
-            Element winner = document.createElement("Winner");
+            Element game = document.createElement("Game");
+            Element gameResult = document.createElement("GameResult");
 
             document.appendChild(root);
             root.setAttribute("board_dimension", String.valueOf(dimension));
@@ -48,38 +48,29 @@ public class History {
             player2.setAttribute("name", name2);
             player2.setAttribute("mark", "0");
 
+            root.appendChild(game);
             for (int i = 0; i < playersSteps.size(); i++) {
-                Element stepX = document.createElement("Step");
-                Element stepY = document.createElement("Step");
-                Element playerStep = document.createElement("PlayerStep");
+                Element step = document.createElement("Step");
+                game.appendChild(step);
                 String currentPlayerName = i % 2 == 0 ? name1 : name2;
-                playerStep.setAttribute("name", currentPlayerName);
-                root.appendChild(playerStep);
-                playerStep.appendChild(stepX);
-                stepX.setAttribute("coordinate", "X");
-                Text text1 = document.createTextNode(String.valueOf(playersSteps.get(i)[0]));
-                stepX.appendChild(text1);
-
-                playerStep.appendChild(stepY);
-                stepY.setAttribute("coordinate", "Y");
-                Text text2 = document.createTextNode(String.valueOf(playersSteps.get(i)[1]));
-                stepY.appendChild(text2);
-
+                step.setAttribute("num", String.valueOf(i + 1));
+                String id = (i % 2 == 0) ? "1" : "2";
+                step.setAttribute("player_id", id);
+                Text text1 = document.createTextNode(String.valueOf(playersSteps.get(i)[0]) + String.valueOf(playersSteps.get(i)[1]));
+                step.appendChild(text1);
             }
 
-            root.appendChild(winner);
+            root.appendChild(gameResult);
             Text resultText = document.createTextNode(result);
-            if (result.equals("DRAW")) {
-                winner.appendChild(resultText);
+            if (result.equals("DRAW!")) {
+                gameResult.appendChild(resultText);
             } else {
                 if (result.equals(name1)) {
-                    winner.setAttribute("id", "1");
-                    winner.setAttribute("name", name1);
-                    winner.setAttribute("mark", "X");
+                    Element winPlayer =  getElementPlayer(document, name1, "1", "X");
+                    gameResult.appendChild(winPlayer);
                 } else {
-                    winner.setAttribute("id", "2");
-                    winner.setAttribute("name", name2);
-                    winner.setAttribute("mark", "0");
+                    Element winPlayer =  getElementPlayer(document, name2, "2", "0");
+                    gameResult.appendChild(winPlayer);
                 }
             }
 

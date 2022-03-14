@@ -43,3 +43,13 @@
 Общий счет: Maria - 1 : 0 - Ivana
 Общий счет: Ivana - 2 : 0 - Petra
 Общий счет: Ivana - 2 : 0 - Petra
+Общий счет: Karin - 1 : 0 - Iva
+Общий счет: Iva - 1 : 0 - Petra
+Общий счет: Petra - 1 : 0 - Klara
+Общий счет: Ana - 1 : 0 - Iva
+Общий счет: Petra  - 1 : 0 - Iva
+Общий счет: Karin - 1 : 0 - Petra
+Общий счет: Petra - 1 : 0 - Karin
+Общий счет: Petra - 1 : 0 - Katrin
+Общий счет: Barbara - 1 : 0 - Katka
+Общий счет: Iva - 0 : 0 - Dana

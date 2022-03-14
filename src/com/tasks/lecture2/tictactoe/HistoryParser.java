@@ -36,11 +36,11 @@ public class HistoryParser {
 
             modelXML = new Model(dimension);
 
-            NodeList playerStep = document.getElementsByTagName("PlayerStep");
-            getAllSteps(modelXML, playerStep);
+            NodeList step = document.getElementsByTagName("Step");
+            getAllSteps(modelXML, step);
 
-            NodeList winner = document.getElementsByTagName("Winner");
-            getGameResult(modelXML, winner);
+            NodeList gameResult = document.getElementsByTagName("GameResult");
+            getGameResult(modelXML, gameResult);
 
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
@@ -53,7 +53,7 @@ public class HistoryParser {
 
     public String[] getPlayerName(NodeList nodeList) {
         String[] playerNamesArr = new String[2];
-        for (int i = 0; i < nodeList.getLength(); i++) {
+        for (int i = 0; i < 2; i++) {
             if (((Element) nodeList.item(i)).hasAttribute("name")) {
                 playerNamesArr[i] = ((Element) nodeList.item(i)).getAttribute("name");
             }
@@ -67,27 +67,21 @@ public class HistoryParser {
     }
 
     public void getAllSteps(Model model, NodeList nodeList) {
-        int counter = 0;
         for (int i = 0; i < nodeList.getLength(); i++) {
-            NodeList childNodes = nodeList.item(i).getChildNodes();
-            for (int j = 1; j < childNodes.getLength(); j += 5) {
-                if (childNodes.item(j) instanceof Element && !((Text) nodeList.item(i).getFirstChild()).getData().trim().equals("\n")) {
-                    Text textX = (Text) childNodes.item(j).getFirstChild();
-                    Text textY = (Text) childNodes.item(j + 2).getFirstChild();
-                    int coordinateX = Integer.parseInt(textX.getData());
-                    int coordinateY = Integer.parseInt(textY.getData());
-                    model.getCoordinateMoves().add(new int[]{coordinateX, coordinateY});
-                    //model.getMoves()[coordinateX][coordinateY] = (counter++) % 2 == 0 ? 'X' : '0';
-                }
-            }
+            Text text = (Text) nodeList.item(i).getFirstChild();
+            int coordinateX = Integer.parseInt(String.valueOf(text.getData().charAt(0)));
+            int coordinateY = Integer.parseInt(String.valueOf(text.getData().charAt(1)));
+            model.getCoordinateMoves().add(new int[]{coordinateX, coordinateY});
         }
     }
 
     public void getGameResult(Model model, NodeList nodeList) {
         if (nodeList.item(0).getTextContent().trim().isEmpty()) {
-            model.setWinner(((Element) nodeList.item(0)).getAttribute("name"));
+            Node item = nodeList.item(0).getChildNodes().item(1);
+            model.setWinner(((Element) item).getAttribute("name"));
         } else {
             model.setWinner("DRAW");
+            System.out.println("DRAW");
         }
     }
 

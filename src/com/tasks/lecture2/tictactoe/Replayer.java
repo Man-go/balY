@@ -13,6 +13,7 @@ public class Replayer {
 
         System.out.println("Повтор игры.");
         System.out.println(players[0] + " - Крестик, " + players[1] + " - Нолик");
+        System.out.println();
         if (model.getWinner().equals("DRAW")) {
             System.out.println("Эта партия была сыграна в ничью.");
         } else {
@@ -25,9 +26,9 @@ public class Replayer {
         for (int[] coordinateMove : model.getCoordinateMoves()) {
             if (counter++ % 2 == 0) {
                 moves[coordinateMove[0]][coordinateMove[1]] = 'X';
-                System.out.println("Ход делает " + players[0] + " - X");
+                System.out.println("Ход делает " + players[0] + " - X" + " (" + coordinateMove[0] + ", " + coordinateMove[1] + ")");
             } else {
-                System.out.println("Ход делает " + players[1] + " - 0");
+                System.out.println("Ход делает " + players[1] + " - 0" + " (" + coordinateMove[0] + ", " + coordinateMove[1] + ")");
                 moves[coordinateMove[0]][coordinateMove[1]] = '0';
             }
             System.out.println(view.printBoard(moves));
